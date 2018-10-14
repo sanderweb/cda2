@@ -85,27 +85,125 @@
         </div>
     </section>
 <!-- end of about section -->
+
+
+
+<!-- @ How we help section -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"><img src="images/help.jpg" class="w-100"></div>
+
+                <div class="col-md-6 how-we-help">
+                    <h5 data-aos="fade-right" data-aos-duration="2000">PROFESIONAL SERVICES</h5>
+                    <h1 data-aos="fade-up" data-aos-duration="2000">How we <b>help you?</b></h1>
+                    <p class="text-justify" data-aos="fade-up" data-aos-duration="2000">Lorem ipsum laborum irure veniam culpa anim sunt excepteur culpa magna sunt dolor labore dolor in officia dolor commodo nisi veniam non veniam in id ut elit est ex exercitation nisi commodo dolore et cillum enim. Incididunt veniam et anim ut minim culpa irure ullamco officia nostrud fugiat culpa voluptate proident ad dolore ut eiusmod voluptate culpa fugiat dolor in dolore.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ./end of how we help section  -->
+
+    <!-- Boost your brand section -->
+    <section class="boost-your-brand parallax">
+        <div class="overlay text-center">
+            <h1 data-aos="fade-up" data-aos-duration="2000">Boost <b>Your Brand</b> With Us</h1>
+            <a href="#" class="btn-order" data-aos="fade-up" data-aos-duration="2000">Order Now</a>
+        </div>
+    </section>
+<!-- @ ./ end of boost your brand section -->
+ 
+ 
+ 
+<!-- @ testimonial section -->
+    <section class="testimonial">
+        <div class="container">
+            <h1 class="text-center" data-aos="fade-up" data-aos-duration="2000">What people <b>Say's</b></h1>
+
+            <!-- Slider  -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <p class="text-center">Ad occaecat voluptate ullamco elit aute commodo quis sed ex minim ex aute velit cillum dolor ullamco aliquip enim dolor nisi ex sunt non aliqua.
+                            <br>
+                            <b>Haris Ahmad, Indonesia</b>
+                        </p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="text-center">Non mollit nisi dolore nulla et minim eiusmod fugiat do aute officia eu amet fugiat occaecat enim.
+                            <br>
+                            <b>Haris Ahmad, Indonesia</b>
+                        </p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="text-center">Cillum nisi dolor quis anim aliqua cillum commodo reprehenderit sunt cillum aliqua enim ea culpa laboris dolor in.
+                            <br>
+                            <b>Haris Ahmad, Indonesia</b>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<!-- @ ./ end of testimonial section -->
+ 
+ 
+ 
+ 
+ 
   
-  <!--FOOTER    -->
+  <!--@ FOOTER    -->
     <footer>
         <p>&copy; 2017 Creative Digital Agency Powerby <a href="#" target="_blank">Webdesign Inspiration</a></p>
     </footer>
-<!--END FOOTER   -->
+<!-- @ END FOOTER   -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+   
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   
     <!-- Bootstrap js -->
     <script src="js/bootstrap.min.js"></script>
     <!-- AOS js -->
     <script src="aos/dist/aos.js"></script>
     <script src="text/javascript">
-    // parallax
-        // $(document).scroll[function()
-        
-         //$(document).scroll(function(){
-          //   war Move = $
-        
+    // AOS animation
+      AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+
+      // change navbar color on page scroll 
+      $(document).ready(function(){       
+         var scroll_start = 0;
+         var startchange = $('#change-it-now');
+         var offset = startchange.offset();
+         if (startchange.length){
+           $(document).scroll(function() { 
+            scroll_start = $(this).scrollTop();
+
+            if(scroll_start > offset.top) {
+              $(".navbar-custom").css('background-color', '#fff');
+            } else {
+              $('.navbar-custom').css('background-color', 'transparent');
+            }
+           });
+         }  
+      });
+
+
+      // parallax
+      $(document).scroll(function(){
+        var move = $(this).scrollTop();
+        $(".parallax").css('background-positionY', (-move)/10 + "px");
+      });
     </script>
 </body>
 </html>
